@@ -202,8 +202,8 @@ function startRandomBackgroundAnimation() {
 }
 
 greetBtn.addEventListener("click", () => {
-  // Requirement: display exactly "Hello" below the button.
-  greetingEl.textContent = "Hello";
+  const name = (nameInput.value || "").trim();
+  greetingEl.textContent = name ? `Hello ${name}` : "Hello";
 
   // Randomly trigger one of the three animations per click.
   if (reduceMotion) {
